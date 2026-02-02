@@ -1,0 +1,59 @@
+/* Laptop approach first here */
+
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin-top: 60px;
+    min-height: 100vh;
+
+}
+
+.skill-heading {
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+
+.skill-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: center;
+    text-align: center;
+    align-items: center;
+    width: 105px;
+    background: #7F6CE0;
+    height: 1.6px;
+
+}
+
+
+.skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px) {
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .skill-heading {
+        width: 100px;
+    }
+
+
+}

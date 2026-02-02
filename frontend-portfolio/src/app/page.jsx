@@ -1,0 +1,41 @@
+'use client'
+import { lazy, Suspense, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Services from "./components/Services";
+
+const Portfolio = lazy(() => import("./components/Portfolio"));
+const Contact = lazy(() => import("./components/Contact"));
+
+export default function Home() {
+  // Preload lazy components
+  useEffect(() => {
+    import("./components/Portfolio");
+    import("./components/Contact");
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <section id="home"><HeroSection /></section>
+        <section id="about"><About /></section>
+        <section id="skills"><Skills /></section>
+        <section id="services"><Services /></section>
+        <section id="portfolio">
+          <Suspense fallback={<div style={{ textAlign: "center", marginBottom: "30px" }}>Loading...</div>}>
+            <Portfolio />
+          </Suspense>
+        </section>
+        <section id="contact">
+          <Suspense fallback={<div style={{ textAlign: "center", marginBottom: "30px" }}>Loading...</div>}>
+            <Contact />
+          </Suspense>
+        </section>
+      </main>
+
+    </>
+  );
+}
