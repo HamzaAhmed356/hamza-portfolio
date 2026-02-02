@@ -88,28 +88,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-        <form
-          className="contact-form"
-          onSubmit={handleSubmit}
-          data-aos="fade-left"
-          data-aos-delay="500"
-        >
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows={5}
-            required
-          ></textarea>
-
-          <button type="submit" disabled={isSending}>
-            {isSending ? "Sending..." : "Send Message"}
-          </button>
-
-          {statusMessage && <p className="form-status">{statusMessage}</p>}
-        </form>
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ export default function About() {
   const htmlIcon = "/assets/images/html.webp";
   const briefcaseIcon = "/assets/images/briefcase.webp";
   const userIcon = "/assets/images/user.webp";
-  const resumePath = "/resume/Muhammad_Zeeshan_Haider_Resume.pdf";
+  const resumePath = "/resume/CvHamzaAhmed.pdf";
 
   return (
     <section className="about-section" id="about">
@@ -43,7 +43,7 @@ export default function About() {
             <a
               className="btnResume"
               href={resumePath}
-              download="Muhammad_Zeeshan_Haider_Resume.pdf"
+              download="CvHamzaAhmed.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

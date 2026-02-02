@@ -9,17 +9,9 @@ const projects = [
   {
     image: "/assets/projects/project2.webp",
     title: "New Year Vibes",
-    skills: [
-      "React Js",
-      "CSS",
-      "canvas-confetti",
-      "react-snowfall",
-      "Vercel Analytics",
-      "Vite",
-    ],
+    skills: ["Next js ", "Mongo DB", "Express", "Node js "],
     description:
       "A modern Freelancing Platform where where Skilled Person can earn by providing their services ",
-    link: "https://github.com/HamzaAhmed356/skillverse-backend.git",
     codeLink: "https://github.com/HamzaAhmed356/skillverse-backend.git",
   },
 ];
@@ -49,7 +41,6 @@ export default function Portfolio() {
                 title={project.title}
                 skills={project.skills}
                 description={project.description}
-                link={project.link}
                 codeLink={project.codeLink}
               />
             ))}
