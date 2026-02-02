@@ -7,7 +7,7 @@ import ProjectSkeleton from "./ProjectSkeleton";
 
 const projects = [
   {
-    image: "/assets/projects/project2.webp",
+    image: "/assets/images/project.png",
     title: "New Year Vibes",
     skills: ["Next js ", "Mongo DB", "Express", "Node js "],
     description:
